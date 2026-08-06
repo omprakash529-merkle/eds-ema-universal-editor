@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-cases",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-08-06T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.merkle.com/",
+    "originPage": "Merkle homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "case-study-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + pretitle + heading + CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "slideCount": 10
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "horizontally scrollable card strips with prev/next arrows",
+      "case-study or work showcases",
+      "many similar teaser cards navigated by swiping"
+    ],
+    "notSuitableFor": [
+      "full-width hero banners (use carousel-hero)",
+      "static non-navigable grids (use cards)",
+      "single video (use video-reel)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-06T00:00:00.000Z"
+  }
+}

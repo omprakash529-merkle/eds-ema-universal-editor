@@ -25,6 +25,18 @@
     ]
   },
   {
+    "id": "carousel-cases",
+    "components": [
+      "carousel-cases-item"
+    ]
+  },
+  {
+    "id": "carousel-hero",
+    "components": [
+      "carousel-hero-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
@@ -38,5 +50,9 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "video-reel",
+    "components": []
   }
 ]

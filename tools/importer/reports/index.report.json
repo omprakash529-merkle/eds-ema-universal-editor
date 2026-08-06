@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.merkle.com/",
+  "path": "index",
+  "timestamp": "2026-08-06T07:18:32.670Z",
+  "title": "Merkle - We Power the Experience Economy",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards",
+    "cards",
+    "cards",
+    "cards",
+    "cards",
+    "video-reel",
+    "carousel-cases"
+  ]
+}

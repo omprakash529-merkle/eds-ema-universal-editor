@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.merkle.com/"
+      ],
+      "representativeUrl": "https://www.merkle.com/",
+      "coverageGaps": [],
+      "description": "Merkle homepage: hero carousel, featured content cards (latest and greatest), capability grid (built for the experience economy), and case study cards (our work in action).",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [".teasercarousel.carousel"]
+        },
+        {
+          "name": "cards",
+          "instances": [".teasergallerylist.mer-featured-tgl", ".container.responsivegrid.text-left"]
+        },
+        {
+          "name": "video-reel",
+          "instances": [".video.centered"]
+        },
+        {
+          "name": "carousel-cases",
+          "instances": [".listcards.teasergallerylist"]
+        },
+        {
+          "name": "section-experience-economy",
+          "instances": ["#main-content > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.full-bleed.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.blue-black-background.full-bleed.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)"],
+          "section": "dark"
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc3",
+          "name": "Hero carousel",
+          "selector": "#main-content > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.full-bleed.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.blue-black-background.full-bleed.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(1)",
+          "style": null,
+          "blocks": ["carousel-hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc4",
+          "name": "Our latest and greatest",
+          "selector": "#main-content > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.full-bleed.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)",
+          "style": null,
+          "blocks": ["cards"],
+          "defaultContent": [".teaser.cmp-teaser-layout-large.content-center"]
+        },
+        {
+          "id": "rc5",
+          "name": "Built for the experience economy",
+          "selector": "#main-content > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.full-bleed.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.blue-black-background.full-bleed.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+          "style": "dark",
+          "blocks": ["cards", "video-reel", "carousel-cases"],
+          "defaultContent": [".teaser.cmp-teaser-layout-large.cmp-teaser-blue-black.top-spacer-s.content-center", ".teaser.cmp-teaser-layout-large.cmp-teaser-blue-black.top-spacer-m.content-center"]
+        }
+      ]
+    }
+  ]
+}
