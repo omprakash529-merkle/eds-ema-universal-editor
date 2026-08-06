@@ -25,10 +25,39 @@ From `.migration/project.json`:
 - **Page node:** `/content/ema-demo-om/index` (i.e. this becomes the `index` page under the site)
 - **Assets folder:** `/content/dam/ema-demo-om` (only relevant for DAM-managed assets; the DM/Scene7 images here are external and need no DAM upload)
 
+## Files in this folder
+
+| File | Purpose |
+|------|---------|
+| `merkle-homepage-content-package.zip` | **Ready-to-upload CRX content package.** Installs the page at `/content/ema-demo-om/index`. Use this. |
+| `index.xml` | The raw JCR `cq:Page` node (same content, unpackaged). |
+| `index.md` | Source markdown (reference only). |
+| `crx-package/` | Unzipped contents of the package (for inspection). |
+
+The package layout (FileVault standard):
+```
+jcr_root/content/ema-demo-om/index/.content.xml   ← the page content
+META-INF/vault/filter.xml                          ← filter: /content/ema-demo-om/index
+META-INF/vault/properties.xml                      ← package metadata
+```
+
 ## How to ingest (AEM-side — requires AEM Author access)
 
-1. **Deploy the code first.** Merge / deploy the `merkle-homepage-migration` branch so the blocks, `scripts.js` DM auto-block, and `aem.js` dispatcher are live. AEM Code Sync handles this once merged to `main`.
-2. **Import the page content.** Load `index.xml` as the `jcr:content` of a new page at `/content/ema-demo-om/index` using your standard AEM content-ingest method (e.g. package upload via CRX Package Manager, or the AEM import tooling). The XML is already a valid `cq:Page` node.
-3. **Open in Universal Editor** to confirm blocks are editable, then Preview / Publish.
+**Step 1 — Deploy the code first.**
+Merge the `merkle-home` branch to `main` so the blocks, the `scripts.js` DM auto-block, and the `aem.js` dispatcher are live. AEM Code Sync handles this automatically on merge. Do this BEFORE importing content, so the blocks exist when the page renders.
 
-> This ingest step runs in your AEM Author environment. It is not performed by the migration tooling — the injected credentials here cover `admin.hlx.page` and `admin.da.live` only, not the AEM Author instance.
+**Step 2 — Upload the content package via CRX Package Manager.**
+1. Go to `https://<your-aem-author-host>/crx/packmgr/index.jsp` (e.g. `https://author-p24773-e1522172.adobeaemcloud.com/crx/packmgr/index.jsp`).
+2. Click **Upload Package** → choose `merkle-homepage-content-package.zip` → **OK**.
+3. Click **Install** on the uploaded package. It creates the page at `/content/ema-demo-om/index`.
+
+**Step 3 — Open in Universal Editor** to confirm the blocks are editable, then **Preview / Publish**.
+
+After publish, the page renders at:
+- Preview: `https://main--eds-ema-universal-editor--omprakash529-merkle.aem.page/` (path `/index` under the site)
+- Live: `https://main--eds-ema-universal-editor--omprakash529-merkle.aem.live/`
+
+> This ingest step runs in your AEM Author environment with your login. It is not performed by the migration tooling — the injected credentials here cover `admin.hlx.page` and `admin.da.live` only, not the AEM Author instance.
+
+### If Package Manager isn't your flow
+The raw `index.xml` is a valid `cq:Page` node — if you use a repo-based content deployment or the AEM Cloud content-import tooling instead, point it at `/content/ema-demo-om/index` using `index.xml` directly.
