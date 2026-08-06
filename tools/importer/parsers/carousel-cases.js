@@ -38,6 +38,7 @@ export default function parse(element, { document }) {
 
   slides.forEach((slide) => {
     const img = slide.querySelector('.cmp-teaser__image img, .cmp-image img, img');
+    const imgUrl = img ? (img.getAttribute('src') || '') : '';
 
     const contentNodes = [];
 
@@ -70,9 +71,11 @@ export default function parse(element, { document }) {
     }
 
     // Skip empty slides.
-    if (!img && contentNodes.length === 0) return;
+    if (!imgUrl && contentNodes.length === 0) return;
 
-    const imageCell = img ? fieldCell(document, 'media_image', [img]) : '';
+    // Emit the image URL as plain text (editable URL field in Universal Editor).
+    const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+    const imageCell = urlNode ? fieldCell(document, 'image_url', [urlNode]) : '';
     const contentCell = fieldCell(document, 'content_text', contentNodes);
 
     cells.push([imageCell, contentCell]);

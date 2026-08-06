@@ -145,11 +145,11 @@
     "id": "card",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "image_url",
+        "label": "Image URL",
+        "description": "URL of the card image (external Dynamic Media URL now; swap to a DAM path later)."
       },
       {
         "component": "richtext",
@@ -164,18 +164,11 @@
     "id": "carousel-cases-item",
     "fields": [
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "media_image",
-        "label": "Card Image",
-        "multi": false
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "media_imageAlt",
-        "value": "",
-        "label": "Card Image Alt"
+        "name": "image_url",
+        "label": "Image URL",
+        "description": "URL of the case-study card image (external Dynamic Media URL now; swap to a DAM path later)."
       },
       {
         "component": "richtext",
@@ -190,18 +183,11 @@
     "id": "carousel-hero-item",
     "fields": [
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "media_image",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "media_imageAlt",
-        "value": "",
-        "label": "Bacgkround Alt"
+        "name": "image_url",
+        "label": "Image URL",
+        "description": "URL of the slide background image (external Dynamic Media URL now; swap to a DAM path later)."
       },
       {
         "component": "richtext",
@@ -295,18 +281,11 @@
         ]
       },
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "placeholder_image",
-        "label": "Placeholder Image",
-        "multi": true
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "placeholder_imageAlt",
-        "value": "",
-        "label": "Placeholder Image Alt Text"
+        "name": "poster",
+        "label": "Placeholder Image URL",
+        "description": "URL of the video poster image (optional; external Dynamic Media URL or a DAM path)."
       }
     ]
   }

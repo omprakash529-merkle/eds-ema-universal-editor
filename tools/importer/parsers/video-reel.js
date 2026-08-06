@@ -8,13 +8,13 @@
  * Structure (per library-description.txt): 1 column, up to 3 rows.
  *   row 1: block name (added by createBlock)
  *   row 2: video source URI  -> model field `uri`
- *   row 3: optional poster/placeholder image -> model field `placeholder_image`
- * The `classes` model field (autoplay options) and `placeholder_imageAlt`
- * (collapsed Alt suffix) do not get their own rows.
+ *   row 3: optional poster/placeholder image URL (plain text) -> `placeholder_image_url`
+ * The `classes` model field (autoplay options) does not get its own row.
  *
  * Source: a native <video> with a <source src="...mp4"> and a poster <img>.
  * The video block decorator expects a link to the video; we emit an <a> whose
- * href is the source URL as the uri cell.
+ * href is the source URL as the uri cell. The optional poster is emitted as a
+ * plain-text URL (editable URL field in Universal Editor).
  */
 
 function fieldCell(document, fieldName, nodes) {
@@ -34,6 +34,7 @@ export default function parse(element, { document }) {
 
   // Poster / placeholder image (the video controls preview <img>).
   const posterImg = element.querySelector('.cmp-video__player__controls img, img');
+  const posterUrl = posterImg ? (posterImg.getAttribute('src') || '') : '';
 
   const cells = [];
 
@@ -45,9 +46,9 @@ export default function parse(element, { document }) {
     cells.push([fieldCell(document, 'uri', [a])]);
   }
 
-  // Row 3: optional placeholder image.
-  if (posterImg) {
-    cells.push([fieldCell(document, 'placeholder_image', [posterImg])]);
+  // Row 3: optional placeholder image URL as plain text (editable URL field).
+  if (posterUrl) {
+    cells.push([fieldCell(document, 'poster', [document.createTextNode(posterUrl)])]);
   }
 
   // Empty-block guard: nothing usable found.

@@ -1,5 +1,24 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
+
+/**
+ * Builds a responsive <picture> in the image column from a plain-text image
+ * URL (the editable "Image URL" field). Falls back to any existing <picture>.
+ * createOptimizedPicture routes DM/Scene7 URLs through the aem.js dispatcher
+ * (params preserved) and handles ordinary DAM paths too. Alt is derived from
+ * the slide heading in the content column for accessibility.
+ * @param {Element} column the image column element
+ * @param {Element} row the slide row (used to find the heading for alt)
+ */
+function buildImageFromUrl(column, row) {
+  if (column.querySelector('picture')) return; // already an image
+  const url = (column.textContent || '').trim();
+  if (!/^(https?:\/\/|\/|\.\/)/.test(url)) return;
+  const alt = row.querySelector('h1,h2,h3,h4,h5,h6')?.textContent.trim() || '';
+  const pic = createOptimizedPicture(url, alt, true, [{ width: '2000' }]);
+  column.replaceChildren(pic);
+}
 
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel-hero');
@@ -117,7 +136,8 @@ function createSlide(row, slideIndex, carouselId) {
 
   row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
     column.classList.add(`carousel-hero-slide-${colIdx === 0 ? 'image' : 'content'}`);
-    if (colIdx !== 0) decorateContent(column);
+    if (colIdx === 0) buildImageFromUrl(column, row);
+    else decorateContent(column);
     slide.append(column);
   });
 

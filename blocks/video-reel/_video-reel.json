@@ -46,18 +46,11 @@
           ]
         },
         {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "placeholder_image",
-          "label": "Placeholder Image",
-          "multi": true
-        },
-        {
           "component": "text",
           "valueType": "string",
-          "name": "placeholder_imageAlt",
-          "value": "",
-          "label": "Placeholder Image Alt Text"
+          "name": "poster",
+          "label": "Placeholder Image URL",
+          "description": "URL of the video poster image (optional; external Dynamic Media URL or a DAM path)."
         }
       ]
     }

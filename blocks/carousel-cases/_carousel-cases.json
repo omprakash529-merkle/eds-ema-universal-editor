@@ -36,18 +36,11 @@
       "id": "carousel-cases-item",
       "fields": [
         {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "media_image",
-          "label": "Card Image",
-          "multi": false
-        },
-        {
           "component": "text",
           "valueType": "string",
-          "name": "media_imageAlt",
-          "value": "",
-          "label": "Card Image Alt"
+          "name": "image_url",
+          "label": "Image URL",
+          "description": "URL of the case-study card image (external Dynamic Media URL now; swap to a DAM path later)."
         },
         {
           "component": "richtext",

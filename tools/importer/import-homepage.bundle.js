@@ -68,6 +68,7 @@ var CustomImportScript = (() => {
     const cells = [];
     slides.forEach((slide) => {
       const img = slide.querySelector(".cmp-teaser__image img, .cmp-image img, img");
+      const imgUrl = img ? img.getAttribute("src") || "" : "";
       const contentNodes = [];
       const pretitle = slide.querySelector(".cmp-teaser__pretitle");
       if (pretitle && pretitle.textContent.trim()) {
@@ -93,8 +94,9 @@ var CustomImportScript = (() => {
         const cta = buildCta(document, anchor);
         if (cta) contentNodes.push(cta);
       });
-      if (!img && contentNodes.length === 0) return;
-      const imageCell = img ? fieldCell(document, "media_image", [img]) : "";
+      if (!imgUrl && contentNodes.length === 0) return;
+      const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+      const imageCell = urlNode ? fieldCell(document, "image_url", [urlNode]) : "";
       const contentCell = fieldCell(document, "content_text", contentNodes);
       cells.push([imageCell, contentCell]);
     });
@@ -155,9 +157,11 @@ var CustomImportScript = (() => {
     const cells = [];
     cardEls.forEach((card) => {
       const img = card.querySelector("img");
+      const imgUrl = img ? img.getAttribute("src") || "" : "";
       const textNodes = extractTextNodes(document, card);
-      if (!img && textNodes.length === 0) return;
-      const imageCell = img ? fieldCell2(document, "image", [img]) : "";
+      if (!imgUrl && textNodes.length === 0) return;
+      const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+      const imageCell = urlNode ? fieldCell2(document, "image_url", [urlNode]) : "";
       const textCell = textNodes.length ? fieldCell2(document, "text", textNodes) : "";
       cells.push([imageCell, textCell]);
     });
@@ -181,6 +185,7 @@ var CustomImportScript = (() => {
     const existingLink = element.querySelector("a[href]");
     const videoUrl = sourceEl && (sourceEl.getAttribute("src") || sourceEl.getAttribute("href")) || existingLink && existingLink.getAttribute("href") || "";
     const posterImg = element.querySelector(".cmp-video__player__controls img, img");
+    const posterUrl = posterImg ? posterImg.getAttribute("src") || "" : "";
     const cells = [];
     if (videoUrl) {
       const a = document.createElement("a");
@@ -188,8 +193,8 @@ var CustomImportScript = (() => {
       a.textContent = videoUrl;
       cells.push([fieldCell3(document, "uri", [a])]);
     }
-    if (posterImg) {
-      cells.push([fieldCell3(document, "placeholder_image", [posterImg])]);
+    if (posterUrl) {
+      cells.push([fieldCell3(document, "poster", [document.createTextNode(posterUrl)])]);
     }
     if (cells.length === 0) {
       element.replaceWith(...element.childNodes);
@@ -214,6 +219,7 @@ var CustomImportScript = (() => {
     const cells = [];
     slides.forEach((slide) => {
       const img = slide.querySelector(".cmp-teaser__image img, .cmp-image img, img");
+      const imgUrl = img ? img.getAttribute("src") || "" : "";
       const contentNodes = [];
       const pretitle = slide.querySelector(".cmp-teaser__pretitle");
       if (pretitle && pretitle.textContent.trim()) {
@@ -239,8 +245,9 @@ var CustomImportScript = (() => {
           contentNodes.push(a);
         }
       }
-      if (!img && contentNodes.length === 0) return;
-      const imageCell = img ? fieldCell4(document, "media_image", [img]) : "";
+      if (!imgUrl && contentNodes.length === 0) return;
+      const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+      const imageCell = urlNode ? fieldCell4(document, "image_url", [urlNode]) : "";
       const contentCell = fieldCell4(document, "content_text", contentNodes);
       cells.push([imageCell, contentCell]);
     });

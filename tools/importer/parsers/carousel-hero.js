@@ -8,14 +8,15 @@
  *
  * Structure (per library-description.txt): container block, one row per slide.
  * Each slide row has 2 columns:
- *   - cell 1: media_image  (background/hero image)
+ *   - cell 1: image_url    (image URL as plain text)
  *   - cell 2: content_text (richtext: pretitle, heading, description, CTA links)
- * media_imageAlt is a collapsed field (Alt suffix) -> lives on the <img> alt attr.
  *
- * Dynamic Media note: images are Scene7 DM URLs. They stay as raw <img> here;
- * the merkle-dm-images transformer rewrites them into carrier anchors in
- * afterTransform (after this parser runs). We place the bare <img> (not the
- * <picture>) so the unlinked-image rewrite produces a clean <a href=DM>alt</a>.
+ * Image handling: the image URL is emitted as PLAIN TEXT into the image_url
+ * field (an editable URL field in Universal Editor). The block JS builds the
+ * responsive <picture> from this URL at render time via createOptimizedPicture,
+ * which routes Dynamic Media / Scene7 URLs through the aem.js dispatcher (params
+ * preserved) and handles ordinary DAM paths too. Because no <img> is emitted,
+ * the merkle-dm-images transformer has nothing to rewrite in these cells.
  */
 
 // Build a single cell as a DocumentFragment with its field hint comment first.
@@ -50,8 +51,9 @@ export default function parse(element, { document }) {
   const cells = [];
 
   slides.forEach((slide) => {
-    // --- cell 1: image ---
+    // --- cell 1: image URL (plain text) ---
     const img = slide.querySelector('.cmp-teaser__image img, .cmp-image img, img');
+    const imgUrl = img ? (img.getAttribute('src') || '') : '';
 
     // --- cell 2: content (richtext) ---
     const contentNodes = [];
@@ -85,9 +87,11 @@ export default function parse(element, { document }) {
     });
 
     // Skip empty slides (defensive: carousel action/indicator artifacts).
-    if (!img && contentNodes.length === 0) return;
+    if (!imgUrl && contentNodes.length === 0) return;
 
-    const imageCell = img ? fieldCell(document, 'media_image', [img]) : '';
+    // Emit the image URL as plain text (editable URL field in Universal Editor).
+    const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+    const imageCell = urlNode ? fieldCell(document, 'image_url', [urlNode]) : '';
     const contentCell = fieldCell(document, 'content_text', contentNodes);
 
     cells.push([imageCell, contentCell]);
