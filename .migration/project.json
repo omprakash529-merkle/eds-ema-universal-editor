@@ -1,0 +1,14 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "eds-ema-universal-editor": {
+      "previewOrg": "omprakash529-merkle",
+      "previewSite": "eds-ema-universal-editor",
+      "aemSitePath": "/content/ema-demo-om",
+      "aemAssetsFolderPath": "/content/dam/ema-demo-om",
+      "aemSiteName": "ema-demo-om",
+      "aemSiteTitle": "ema-demo-om",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
