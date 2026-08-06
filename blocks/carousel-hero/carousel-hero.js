@@ -71,6 +71,44 @@ function bindEvents(block) {
   });
 }
 
+/**
+ * Classifies the content-column children so CSS can style the Merkle hero:
+ * - eyebrow  = a leading <p> that sits before the heading (short label)
+ * - heading  = h1-h6 (unchanged)
+ * - desc     = a <p> after the heading with body copy (no anchor)
+ * - CTA links are collected into a single .carousel-hero-slide-cta row and
+ *   tagged .primary / .secondary (first = filled pill, rest = outlined pill)
+ * @param {Element} content the content column element
+ */
+function decorateContent(content) {
+  const kids = [...content.children];
+  const headingIdx = kids.findIndex((el) => /^H[1-6]$/.test(el.tagName));
+
+  kids.forEach((el, idx) => {
+    if (el.tagName !== 'P') return;
+    if (el.querySelector('a')) return; // CTA paragraphs handled below
+    if (headingIdx !== -1 && idx < headingIdx) {
+      el.classList.add('carousel-hero-slide-eyebrow');
+    } else {
+      el.classList.add('carousel-hero-slide-desc');
+    }
+  });
+
+  // Collect CTA links (each authored as its own <p><a>) into one row.
+  const ctaParas = kids.filter((el) => el.tagName === 'P' && el.querySelector('a'));
+  if (ctaParas.length) {
+    const ctaRow = document.createElement('div');
+    ctaRow.className = 'carousel-hero-slide-cta';
+    ctaParas.forEach((p, idx) => {
+      const a = p.querySelector('a');
+      a.classList.add('button', idx === 0 ? 'primary' : 'secondary');
+      ctaRow.append(a);
+      p.remove();
+    });
+    content.append(ctaRow);
+  }
+}
+
 function createSlide(row, slideIndex, carouselId) {
   const slide = document.createElement('li');
   slide.dataset.slideIndex = slideIndex;
@@ -79,6 +117,7 @@ function createSlide(row, slideIndex, carouselId) {
 
   row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
     column.classList.add(`carousel-hero-slide-${colIdx === 0 ? 'image' : 'content'}`);
+    if (colIdx !== 0) decorateContent(column);
     slide.append(column);
   });
 

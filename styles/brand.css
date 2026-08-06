@@ -1,0 +1,37 @@
+/*
+ * brand.css — Design tokens extracted from https://www.merkle.com/
+ * Proxima Nova (Adobe Fonts, licensed) kept first in the stack; Montserrat
+ * (Google Fonts) is the delivered geometric-sans substitute. If a licensed
+ * Proxima Nova kit is added to head.html later, it takes over automatically.
+ */
+
+:root {
+  /* fonts */
+  --heading-font-family: "proxima-nova", "Montserrat", sans-serif;
+  --body-font-family: "proxima-nova", "Montserrat", sans-serif;
+
+  /* colors */
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #000;
+  --link-hover-color: #5944b0;
+
+  /* Merkle dark theme (blue-black → black) */
+  --dark-color: #000;
+  --dark-text-color: #fff;
+  --dark-muted-text-color: #aeaebc;
+  --light-color: #fff;
+
+  /* spacing */
+  --section-padding: 80px;
+  --content-max-width: 1440px;
+  --nav-height: 64px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 52px;
+  --heading-size-xl: 40px;
+  --heading-size-l: 32px;
+  --heading-size-m: 24px;
+  --heading-size-s: 20px;
+  --heading-size-xs: 16px;
+}
