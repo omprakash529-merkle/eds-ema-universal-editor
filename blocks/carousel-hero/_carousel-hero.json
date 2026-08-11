@@ -36,18 +36,11 @@
       "id": "carousel-hero-item",
       "fields": [
         {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "media_image",
-          "label": "Background Image",
-          "multi": false
-        },
-        {
           "component": "text",
           "valueType": "string",
-          "name": "media_imageAlt",
-          "value": "",
-          "label": "Bacgkround Alt"
+          "name": "image_url",
+          "label": "Image URL",
+          "description": "URL of the slide background image (external Dynamic Media URL now; swap to a DAM path later)."
         },
         {
           "component": "richtext",

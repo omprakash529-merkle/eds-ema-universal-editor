@@ -1,1 +1,299 @@
 /* add global styles that can be loaded post LCP here */
+
+/* ==========================================================================
+   Nexcent (Figma) theme — scoped to nexcent-* block variants and section
+   styles so it never affects the Merkle homepage. Brand: green #4CAF4F on
+   white / light-grey, Inter typography.
+   ========================================================================== */
+
+:root {
+  --nexcent-green: #4caf4f;
+  --nexcent-green-dark: #388e3b;
+  --nexcent-green-tint: #e8f5e9;
+  --nexcent-ink: #4d4d4d;
+  --nexcent-body: #717171;
+  --nexcent-light: #f5f7fa;
+  --nexcent-border: #e0e0e0;
+  --nexcent-font: "Inter", "Montserrat", sans-serif;
+}
+
+/* Apply Inter to every nexcent block variant (not just styled sections) */
+.columns.nexcent-hero,
+.columns.nexcent-feature-row,
+.columns.nexcent-testimonial,
+.cards.nexcent-logos,
+.cards.nexcent-features,
+.cards.nexcent-stats,
+.cards.nexcent-blog {
+  font-family: var(--nexcent-font);
+}
+
+.columns.nexcent-hero h1,
+.columns.nexcent-feature-row h2,
+.columns.nexcent-testimonial strong,
+.cards.nexcent-features h3,
+.cards.nexcent-stats h3,
+.cards.nexcent-blog h3 {
+  font-family: var(--nexcent-font);
+}
+
+/* Hero — text left, illustration right */
+.columns.nexcent-hero > div {
+  align-items: center;
+  gap: 64px;
+}
+
+.columns.nexcent-hero h1 {
+  margin: 0 0 8px;
+  color: var(--nexcent-ink);
+  font-size: 56px;
+  line-height: 1.15;
+}
+
+.columns.nexcent-hero p {
+  color: var(--nexcent-body);
+  font-size: 16px;
+}
+
+.columns.nexcent-hero a {
+  display: inline-block;
+  margin-top: 16px;
+  border-radius: 4px;
+  padding: 14px 32px;
+  background: var(--nexcent-green);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Client logo strip */
+.cards.nexcent-logos ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.cards.nexcent-logos li {
+  border: 0;
+}
+
+.cards.nexcent-logos img {
+  width: auto;
+  max-height: 40px;
+  opacity: 0.7;
+  filter: grayscale(1);
+}
+
+/* Feature cards — icon + heading + text, centered */
+.cards.nexcent-features ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  list-style: none;
+  padding: 0;
+}
+
+.cards.nexcent-features li {
+  border: 1px solid var(--nexcent-border);
+  border-radius: 8px;
+  padding: 24px 32px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(171 190 209 / 20%);
+  text-align: center;
+}
+
+.cards.nexcent-features h3 {
+  color: var(--nexcent-ink);
+  font-size: 28px;
+}
+
+.cards.nexcent-features p {
+  color: var(--nexcent-body);
+  font-size: 14px;
+}
+
+.cards.nexcent-features img {
+  width: 65px;
+  height: 56px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Stats band — 4 metrics */
+.cards.nexcent-stats ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  max-width: 720px;
+  list-style: none;
+  padding: 0;
+}
+
+.cards.nexcent-stats li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+}
+
+.cards.nexcent-stats img {
+  width: 40px;
+  height: 40px;
+}
+
+.cards.nexcent-stats h3 {
+  margin: 0;
+  color: var(--nexcent-ink);
+  font-size: 28px;
+}
+
+.cards.nexcent-stats p {
+  margin: 0;
+  color: var(--nexcent-body);
+}
+
+/* Feature rows — image + text side by side */
+.columns.nexcent-feature-row > div {
+  align-items: center;
+  gap: 64px;
+}
+
+.columns.nexcent-feature-row h2 {
+  color: var(--nexcent-ink);
+  font-size: 36px;
+}
+
+.columns.nexcent-feature-row p {
+  color: var(--nexcent-body);
+}
+
+.columns.nexcent-feature-row a {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background: var(--nexcent-green);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Testimonial */
+.columns.nexcent-testimonial > div {
+  align-items: center;
+  gap: 48px;
+}
+
+.columns.nexcent-testimonial p {
+  color: var(--nexcent-body);
+}
+
+.columns.nexcent-testimonial strong {
+  color: var(--nexcent-ink);
+}
+
+.columns.nexcent-testimonial a[href] {
+  color: var(--nexcent-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Blog cards */
+.cards.nexcent-blog ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.cards.nexcent-blog li {
+  border: 1px solid var(--nexcent-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cards.nexcent-blog .cards-card-body {
+  padding: 20px 24px 28px;
+}
+
+.cards.nexcent-blog h3 {
+  color: var(--nexcent-ink);
+  font-size: 16px;
+}
+
+.cards.nexcent-blog a {
+  color: var(--nexcent-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Section-level theming (lower specificity, placed after block rules) */
+main .section.nexcent {
+  font-family: var(--nexcent-font);
+}
+
+main .section.nexcent.light {
+  background-color: var(--nexcent-light);
+}
+
+main .section.nexcent.cta {
+  padding: 64px 0;
+  background-color: var(--nexcent-light);
+  text-align: center;
+}
+
+main .section.nexcent h1,
+main .section.nexcent h2,
+main .section.nexcent h3 {
+  color: var(--nexcent-ink);
+  font-family: var(--nexcent-font);
+  font-weight: 600;
+}
+
+main .section.nexcent h1 span,
+main .section.nexcent h2 span {
+  color: var(--nexcent-green);
+}
+
+main .section.nexcent.cta h2 {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  font-size: 42px;
+}
+
+main .section.nexcent.cta a {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 14px 32px;
+  background: var(--nexcent-green);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .cards.nexcent-features ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards.nexcent-blog ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .columns.nexcent-hero > div,
+  .columns.nexcent-feature-row > div,
+  .columns.nexcent-testimonial > div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Hover states */
+/* stylelint-disable-next-line no-descending-specificity */
+.columns.nexcent-hero a:hover {
+  background: var(--nexcent-green-dark);
+}

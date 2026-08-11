@@ -1,0 +1,23 @@
+{
+  "pageName": "nexcent",
+  "fileKey": "UgJPggaj00SeKY4dvlR7Uh",
+  "pageNodeId": "5:573",
+  "pageWidth": 1440,
+  "pageHeight": 4376,
+  "brand": "green on white/light-grey (Nexcent)",
+  "totalBlocks": 11,
+  "notes": "Y values are absolute from Figma metadata (page top y=-2354). 'yRel' is relative to page top for vertical-rhythm checks. Header and Footer are page chrome (nav/footer fragments in EDS).",
+  "blocks": [
+    { "order": 1, "nodeId": "213:957", "figmaName": "Frame 36 (Header)", "suggestedBlockType": "nav", "suggestedVariantName": "nav", "width": 1440, "height": 84, "y": -2354, "yRel": 0, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "Logo + menu (Home/Service/Feature/Product/Testimonial/FAQ) + Login + Sign up. Authored as /nav fragment." },
+    { "order": 2, "nodeId": "10:923", "figmaName": "Hero Section", "suggestedBlockType": "hero", "suggestedVariantName": "hero-nexcent", "width": 1440, "height": 599, "y": -2270, "yRel": 84, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "'Lessons and insights from 8 years' + subtext + Register CTA + hero illustration." },
+    { "order": 3, "nodeId": "10:946", "figmaName": "Clients", "suggestedBlockType": "cards", "suggestedVariantName": "logo-strip", "width": 1440, "height": 190, "y": -1631, "yRel": 723, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "'Our Clients' heading + subtext + row of ~7 client logos." },
+    { "order": 4, "nodeId": "14:1010", "figmaName": "Community", "suggestedBlockType": "cards", "suggestedVariantName": "cards-feature", "width": 1440, "height": 416, "y": -1401, "yRel": 953, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "'Manage your entire community in a single system' heading + 3 feature cards (icon + heading + text)." },
+    { "order": 5, "nodeId": "14:1043", "figmaName": "Unlock", "suggestedBlockType": "columns", "suggestedVariantName": "columns-feature", "width": 1440, "height": 433, "y": -943, "yRel": 1411, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "Illustration left + 'The unseen of spending three years at Pixelgrade' text + Learn More CTA right." },
+    { "order": 6, "nodeId": "16:1332", "figmaName": "Achievements", "suggestedBlockType": "cards", "suggestedVariantName": "stats", "width": 1440, "height": 288, "y": -462, "yRel": 1892, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "'Helping a local business reinvent itself' + 4 stat metrics (Members / Clubs / Event Bookings / Payments) with icons. Light-grey band." },
+    { "order": 7, "nodeId": "17:677", "figmaName": "Calender", "suggestedBlockType": "columns", "suggestedVariantName": "columns-feature", "width": 1440, "height": 433, "y": -126, "yRel": 2228, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "Phone illustration left + 'How to design your site footer like we did' text + Learn More CTA right. Reuses columns-feature." },
+    { "order": 8, "nodeId": "22:780", "figmaName": "Customer's", "suggestedBlockType": "columns", "suggestedVariantName": "columns-testimonial", "width": 1440, "height": 390, "y": 355, "yRel": 2709, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "Tesla image left + quote + 'Tim Smith / British Dragon Boat Racing Association' + client logos + 'Meet all customers' link." },
+    { "order": 9, "nodeId": "22:919", "figmaName": "Community Updates", "suggestedBlockType": "cards", "suggestedVariantName": "cards-blog", "width": 1440, "height": 506, "y": 793, "yRel": 3147, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "'Caring is the new marketing' heading + subtext + 3 blog cards (image + title + Readmore)." },
+    { "order": 10, "nodeId": "22:928", "figmaName": "Frame 16 (CTA)", "suggestedBlockType": "hero", "suggestedVariantName": "cta-banner", "width": 1440, "height": 300, "y": 1394, "yRel": 3748, "status": "pending", "hasImages": false, "imageValidation": "n/a", "note": "Big centered 'Pellentesque suscipit fringilla libero eu.' + 'Get a Demo' CTA. Light band, no image." },
+    { "order": 11, "nodeId": "211:1053", "figmaName": "Footer", "suggestedBlockType": "footer", "suggestedVariantName": "footer", "width": 1440, "height": 328, "y": 1694, "yRel": 4048, "status": "pending", "hasImages": true, "imageValidation": "pending", "note": "Dark footer: Nexcent logo + copyright + social icons | Company | Support | Stay up to date (email input). Authored as /footer fragment." }
+  ]
+}

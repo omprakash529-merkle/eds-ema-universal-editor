@@ -86,12 +86,15 @@ export default function parse(element, { document }) {
 
   cardEls.forEach((card) => {
     const img = card.querySelector('img');
+    const imgUrl = img ? (img.getAttribute('src') || '') : '';
     const textNodes = extractTextNodes(document, card);
 
     // Skip genuinely empty cards.
-    if (!img && textNodes.length === 0) return;
+    if (!imgUrl && textNodes.length === 0) return;
 
-    const imageCell = img ? fieldCell(document, 'image', [img]) : '';
+    // Emit the image URL as plain text (editable URL field in Universal Editor).
+    const urlNode = imgUrl ? document.createTextNode(imgUrl) : null;
+    const imageCell = urlNode ? fieldCell(document, 'image_url', [urlNode]) : '';
     const textCell = textNodes.length ? fieldCell(document, 'text', textNodes) : '';
 
     cells.push([imageCell, textCell]);

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>FileVault Package Definition</comment>
+  <entry key="name">nexcent-landing-page</entry>
+  <entry key="group">nexcent-migration</entry>
+  <entry key="version">1.0</entry>
+  <entry key="description">Nexcent landing page migrated from Figma (page: /content/ema-demo-om/nexcent).</entry>
+  <entry key="packageType">content</entry>
+</properties>
