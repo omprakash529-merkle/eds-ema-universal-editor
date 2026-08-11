@@ -297,3 +297,26 @@ main .section.nexcent.cta a {
 .columns.nexcent-hero a:hover {
   background: var(--nexcent-green-dark);
 }
+
+/* ==========================================================================
+   Published-page fallback theming. The ingested JCR page keeps only base
+   .columns / .cards blocks (the .nexcent-* variant classes are draft-only and
+   are stripped on publish). Section-metadata style values DO survive as
+   section classes (.section.nexcent + .light / .cta), so scope the brand
+   theme to those. This never touches the Merkle page (no .nexcent section).
+   ========================================================================== */
+main .section.nexcent .columns,
+main .section.nexcent .cards {
+  font-family: var(--nexcent-font);
+}
+
+main .section.nexcent .cards a:any-link,
+main .section.nexcent .columns a.button:any-link {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background: var(--nexcent-green);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
