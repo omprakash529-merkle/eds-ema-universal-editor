@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Lessons and insights from 8 years" titleType="h1"/>
+        <columns sling:resourceType="core/franklin/components/columns/v1/columns" jcr:primaryType="nt:unstructured" rows="1" columns="2">
+          <row1 jcr:primaryType="nt:unstructured">
+            <col1 jcr:primaryType="nt:unstructured">
+              <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Lessons and insights from 8 years" titleType="h1"/>
+              <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Where to grow your business as a photographer: site or social media?&lt;/p&gt;"/>
+              <button sling:resourceType="core/franklin/components/button/v1/button" jcr:primaryType="nt:unstructured" link="/drafts/nexcent" linkText="Register"/>
+            </col1>
+            <col2 jcr:primaryType="nt:unstructured">
+              <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/hero-illustration.png" imageAlt="Hero illustration"/>
+            </col2>
+          </row1>
+        </columns>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+------------------------+
+                    | Section Metadata       |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | style   | nexcent light |
+                    +---------+--------------+&lt;/p&gt;"/>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Our Clients" titleType="h2"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;We have been working with some Fortune 500+ clients&lt;/p&gt;"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="cards" name="Cards">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_3>
+          <item_4 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_4>
+          <item_5 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png"></item_5>
+        </block>
+      </section_1>
+      <section_2 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Manage your entire community in a single system" titleType="h2"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Who is Nexcent suitable for?&lt;/p&gt;&lt;p&gt;+-------------------------------+--------------------------------------+
+                    | Cards                                                                |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | &lt;/p&gt;&lt;p&gt;    | ### Membership Organisations         |
+                    |                               |                                      |
+                    |                               | Our membership management software provides full automation of membership renewals and payments |
+                    +-------------------------------+--------------------------------------+
+                    | &lt;/p&gt;&lt;p&gt;  | ### National Associations            |
+                    |                               |                                      |
+                    |                               | Our membership management software provides full automation of membership renewals and payments |
+                    +-------------------------------+--------------------------------------+
+                    | &lt;/p&gt;&lt;p&gt;         | ### Clubs And Groups                 |
+                    |                               |                                      |
+                    |                               | Our membership management software provides full automation of membership renewals and payments |
+                    +-------------------------------+--------------------------------------+&lt;/p&gt;"/>
+        <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Membership icon"/>
+        <image_1 sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Associations icon"/>
+        <image_2 sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Clubs icon"/>
+      </section_2>
+      <section_3 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+-------------------------------+--------------------------------------+
+                    | Columns                                                              |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | &lt;/p&gt;&lt;p&gt; | ## The unseen of spending three years at Pixelgrade |
+                    |                               |                                      |
+                    |                               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio. |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Learn More&lt;/a&gt;        |
+                    +-------------------------------+--------------------------------------+&lt;/p&gt;"/>
+        <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Unseen illustration"/>
+      </section_3>
+      <section_4 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Helping a local business reinvent itself" titleType="h2"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;We reached here with our hard work and dedication&lt;/p&gt;"/>
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" filter="cards" name="Cards">
+          <item_0 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png" text="&lt;p&gt;&lt;h3&gt;2,245,341&lt;/h3&gt;&lt;/p&gt;&lt;p&gt;Members&lt;/p&gt;"></item_0>
+          <item_1 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png" text="&lt;p&gt;&lt;h3&gt;46,328&lt;/h3&gt;&lt;/p&gt;&lt;p&gt;Clubs&lt;/p&gt;"></item_1>
+          <item_2 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png" text="&lt;p&gt;&lt;h3&gt;828,867&lt;/h3&gt;&lt;/p&gt;&lt;p&gt;Event Bookings&lt;/p&gt;"></item_2>
+          <item_3 jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/block/v1/block/item" name="Card" model="card" modelFields="[image_url,text]" image_url="/drafts/images/nexcent/placeholder.png" text="&lt;p&gt;&lt;h3&gt;1,926,436&lt;/h3&gt;&lt;/p&gt;&lt;p&gt;Payments&lt;/p&gt;"></item_3>
+        </block>
+        <text_1 sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+------------------------+
+                    | Section Metadata       |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | style   | nexcent light |
+                    +---------+--------------+&lt;/p&gt;"/>
+      </section_4>
+      <section_5 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+-------------------------------+--------------------------------------+
+                    | Columns                                                              |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | &lt;/p&gt;&lt;p&gt; | ## How to design your site footer like we did |
+                    |                               |                                      |
+                    |                               | Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt blandit, nisi risus vulputate ante, vitae ultricies velit orci a magna. Fusce vehicula lacus quis nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisl eget nulla commodo faucibus efficitur quis massa. |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Learn More&lt;/a&gt;        |
+                    +-------------------------------+--------------------------------------+&lt;/p&gt;"/>
+        <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Footer illustration"/>
+      </section_5>
+      <section_6 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+-------------------------------+--------------------------------------+
+                    | Columns                                                              |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | &lt;/p&gt;&lt;p&gt;      | Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel iaculis risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. |
+                    |                               |                                      |
+                    |                               | &lt;strong&gt;Tim Smith&lt;/strong&gt;                        |
+                    |                               |                                      |
+                    |                               | British Dragon Boat Racing Association |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Meet all customers →&lt;/a&gt; |
+                    +-------------------------------+--------------------------------------+&lt;/p&gt;"/>
+        <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Tesla product"/>
+      </section_6>
+      <section_7 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Caring is the new marketing" titleType="h2"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who&#x27;s joining the community, read about how our community are increasing their membership income and lot&#x27;s more.&lt;/p&gt;&lt;p&gt;+-------------------------------+--------------------------------------+
+                    | Cards                                                                |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | &lt;/p&gt;&lt;p&gt;             | ### Creating Streamlined Safeguarding Processes with OneRen |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Readmore →&lt;/a&gt;        |
+                    +-------------------------------+--------------------------------------+
+                    | &lt;/p&gt;&lt;p&gt;             | ### What are your safeguarding responsibilities and how can you manage them? |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Readmore →&lt;/a&gt;        |
+                    +-------------------------------+--------------------------------------+
+                    | &lt;/p&gt;&lt;p&gt;             | ### Revamping the Membership Model with Triathlon Australia |
+                    |                               |                                      |
+                    |                               | &lt;a href&#x3D;&quot;/drafts/nexcent&quot;&gt;Readmore →&lt;/a&gt;        |
+                    +-------------------------------+--------------------------------------+&lt;/p&gt;"/>
+        <image sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Blog 1"/>
+        <image_1 sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Blog 2"/>
+        <image_2 sling:resourceType="core/franklin/components/image/v1/image" jcr:primaryType="nt:unstructured" image="/drafts/images/nexcent/placeholder.png" imageAlt="Blog 3"/>
+      </section_7>
+      <section_8 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Pellentesque suscipit fringilla libero eu." titleType="h2"/>
+        <button sling:resourceType="core/franklin/components/button/v1/button" jcr:primaryType="nt:unstructured" link="/drafts/nexcent" linkText="Get a Demo →"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+------------------------+
+                    | Section Metadata       |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | style   | nexcent cta   |
+                    +---------+--------------+&lt;/p&gt;"/>
+      </section_8>
+      <section_9 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;+------------------------+
+                    | Metadata               |
+                    +&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;+
+                    | Title   | Nexcent — Lessons and insights from 8 years |
+                    +---------+--------------+
+                    | nav     | /drafts/nexcent-nav |
+                    +---------+--------------+
+                    | footer  | /drafts/nexcent-footer |
+                    +---------+--------------+&lt;/p&gt;"/>
+      </section_9>
+    </root>
+  </jcr:content>
+</jcr:root>
