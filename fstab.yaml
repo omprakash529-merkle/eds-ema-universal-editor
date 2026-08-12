@@ -1,5 +1,2 @@
 mountpoints:
-  /:
-    url: "https://author-p24773-e1522172.adobeaemcloud.com/bin/franklin.delivery/omprakash529-merkle/eds-ema-universal-editor/main"
-    type: "markup"
-    suffix: ".html"
+  /: https://content.da.live/omprakash529-merkle/eds-ema-da-demo/
