@@ -1,0 +1,249 @@
+/*
+ * carousel — Merkle homepage hero carousel
+ * Extracted from merkle.com `.teasercarousel.carousel` computed styles.
+ * Full-bleed dark photographic slides, large white heading, muted eyebrow,
+ * pill CTAs, and 52x2 progress-bar indicators (active = Merkle red).
+ * No gradient overlay on source (`.no-gradient-overlay`); readability comes
+ * from the baked-in dark region of the Scene7 image.
+ */
+
+/* ---- Full-bleed: escape the 1200px section container ---- */
+main .section.carousel-container {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+main .section.carousel-container > .carousel-wrapper {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Block root ---- */
+.carousel {
+  position: relative;
+  color: #fff;
+}
+
+.carousel .carousel-slides-container {
+  position: relative;
+}
+
+.carousel .carousel-slides,
+.carousel .carousel-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel .carousel-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+}
+
+.carousel .carousel-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- Slide ---- */
+.carousel .carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* mobile: content bottom-weighted */
+  align-items: flex-start;
+  min-height: 528px;           /* source mobile teaser height */
+  overflow: hidden;
+}
+
+/* ---- Background image ---- */
+.carousel .carousel-slide-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+}
+
+.carousel .carousel-slide-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* ---- Content column ---- */
+.carousel .carousel-slide-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 570px;
+  padding: 0 15px 100px;       /* mobile: clear the indicator bars */
+  background: transparent;
+}
+
+/* Eyebrow label (muted uppercase) */
+.carousel .carousel-slide-eyebrow {
+  margin: 0 0 16px;
+  color: var(--dark-muted-text-color);   /* #aeaebc */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* Heading */
+.carousel .carousel-slide-content h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: none;
+}
+
+/* Description */
+.carousel .carousel-slide-desc {
+  margin: 16px 0 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* ---- CTA row ---- */
+.carousel .carousel-slide-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Override global `main a.button:any-link` reset (which strips the pill). */
+.carousel .carousel-slide-cta a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: normal;
+}
+
+/* Primary — white filled pill */
+.carousel .carousel-slide-cta a.button.primary:any-link {
+  padding: 15px 16px;
+  border: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.carousel .carousel-slide-cta a.button.primary:any-link:hover,
+.carousel .carousel-slide-cta a.button.primary:any-link:focus-visible {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Secondary — red-outlined pill */
+.carousel .carousel-slide-cta a.button.secondary:any-link {
+  padding: 13px 14px;
+  border: 2px solid #dd3039;   /* Merkle red */
+  background-color: transparent;
+  color: #fff;
+}
+
+.carousel .carousel-slide-cta a.button.secondary:any-link:hover,
+.carousel .carousel-slide-cta a.button.secondary:any-link:focus-visible {
+  border-color: #dd3039;
+  background-color: #dd3039;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- Progress-bar indicators (52x2, active = red) ---- */
+.carousel nav {
+  position: static;
+}
+
+.carousel .carousel-slide-indicators {
+  position: absolute;
+  left: 15px;
+  bottom: 32px;
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  line-height: 0;
+}
+
+.carousel .carousel-slide-indicator {
+  margin: 0;
+}
+
+.carousel .carousel-slide-indicator button {
+  width: 52px;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--dark-muted-text-color);   /* inactive #aeaebc */
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+/* JS marks the active slide's indicator button as [disabled]. */
+.carousel .carousel-slide-indicator button:disabled,
+.carousel .carousel-slide-indicator button:hover,
+.carousel .carousel-slide-indicator button:focus-visible {
+  background-color: #dd3039;   /* active / hover = Merkle red */
+}
+
+/* ---- Navigation arrows: hidden (source has none) ---- */
+.carousel .carousel-navigation-buttons {
+  display: none;
+}
+
+/* ---- Desktop ---- */
+@media (width >= 900px) {
+  .carousel .carousel-slide {
+    justify-content: center;   /* desktop: vertically centered */
+    min-height: 522px;
+  }
+
+  .carousel .carousel-slide-content {
+    max-width: 630px;   /* 570px text column + 30px gutter each side */
+    padding: 0 30px;
+  }
+
+  .carousel .carousel-slide-content h2 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .carousel .carousel-slide-indicators {
+    left: 30px;
+  }
+}
