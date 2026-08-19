@@ -20,6 +20,60 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Social Share Image",
+        "description": "Open Graph / Twitter card image (og:image). Falls back to the first image on the page.",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Social Share Image Alt Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "canonical",
+        "label": "Canonical URL",
+        "description": "Absolute canonical URL for this page. Leave empty to use the page's own URL."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "robots",
+        "label": "Robots",
+        "description": "Search engine indexing directive.",
+        "value": "index, follow",
+        "options": [
+          {
+            "name": "Index, Follow",
+            "value": "index, follow"
+          },
+          {
+            "name": "No Index, Follow",
+            "value": "noindex, follow"
+          },
+          {
+            "name": "Index, No Follow",
+            "value": "index, nofollow"
+          },
+          {
+            "name": "No Index, No Follow",
+            "value": "noindex, nofollow"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "template",
+        "label": "Template (Style)",
+        "description": "Design template applied to the page (adds a body class, e.g. 'xyzee'). Leave empty for the default look."
       }
     ]
   },
